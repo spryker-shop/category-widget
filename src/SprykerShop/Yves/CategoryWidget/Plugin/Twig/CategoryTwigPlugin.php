@@ -57,12 +57,6 @@ class CategoryTwigPlugin extends AbstractPlugin implements TwigPluginInterface
         return $this->addGlobalTemplateVariables($twig, $container);
     }
 
-    /**
-     * @param \Twig\Environment $twig
-     * @param \Spryker\Service\Container\ContainerInterface $container
-     *
-     * @return \Twig\Environment
-     */
     protected function addGlobalTemplateVariables(Environment $twig, ContainerInterface $container): Environment
     {
         foreach ($this->getGlobalTemplateVariables($container) as $globalVariableName => $globalVariableValue) {
@@ -72,11 +66,6 @@ class CategoryTwigPlugin extends AbstractPlugin implements TwigPluginInterface
         return $twig;
     }
 
-    /**
-     * @param \Spryker\Service\Container\ContainerInterface $container
-     *
-     * @return array
-     */
     protected function getGlobalTemplateVariables(ContainerInterface $container): array
     {
         return [

@@ -41,11 +41,6 @@ class CategoryServiceProvider extends AbstractPlugin implements ServiceProviderI
     {
     }
 
-    /**
-     * @param \Silex\Application $app
-     *
-     * @return array
-     */
     protected function getGlobalTemplateVariables(Application $app): array
     {
         return [
